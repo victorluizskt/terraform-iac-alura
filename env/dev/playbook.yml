@@ -13,8 +13,16 @@
       name:
         - django
         - djangorestframework
+  - name: verify the project existing
+    stat:
+      path: /home/ubuntu/tcc/setup/settings.py
+    # Save variable project
+    register: project
+  
   - name: initialize project
     shell: '. /home/ubuntu/tcc/venv/bin/activate; django-admin startproject setup /home/ubuntu/tcc'
+    # Check if the project already exists.
+    when: not project.stat.exists
   - name: change hosts settings
     lineinfile: 
       path: /home/ubuntu/tcc/setup/settings.py
