@@ -6,6 +6,8 @@
 *.tfstate
 *.tfstate.*
 *.pub
+IaC-DEV
+Iac-Prod
 
 # Crash log files
 crash.log
