@@ -18,6 +18,9 @@ resource "aws_instance" "app_server" {
   ami           = "ami-006e00d6ac75d2ebb"
   instance_type = var.instance
   key_name = var.key
+  tags = {
+    Name = var.name_instance
+  }
 }
 
 resource "aws_key_pair" "keySSH" {

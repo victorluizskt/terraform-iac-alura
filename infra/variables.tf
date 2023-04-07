@@ -11,3 +11,7 @@ variable "key" {
 variable "instance" {
   type = string
 }
+
+variable "name_instance" {
+  type = string
+}
