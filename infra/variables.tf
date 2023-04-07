@@ -15,3 +15,7 @@ variable "instance" {
 variable "name_instance" {
   type = string
 }
+
+variable "geral_access" {
+  type = string
+}
